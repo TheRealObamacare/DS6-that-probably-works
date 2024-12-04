@@ -15,12 +15,13 @@ public class DS6_PriorityQueue<E extends Comparable<E>> implements DS6_PriorityQ
         }
         for(int i=0; i<queue.size(); i++)
         {
-            if(queue.get(i).compareTo(o)<0)
+            if(queue.get(i).compareTo(o)>0)
             {
                 queue.add(i, o);
                 return;
             }
         }
+        queue.add(o);
     }
     public E poll()
     {
@@ -51,6 +52,13 @@ public class DS6_PriorityQueue<E extends Comparable<E>> implements DS6_PriorityQ
     }
     public E element()
     {
+        if (queue.isEmpty())
+            return null;
         return queue.get(0);
+    }
+    @Override
+    public String toString()
+    {
+        return queue.toString();
     }
 }
