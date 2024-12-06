@@ -1,7 +1,7 @@
 import java.util.ArrayList;
-public class DS6_PriorityQueue<E extends Comparable<E>> implements DS6_PriorityQueueInterface<E>
+public class DS6_PriorityQueue<E extends Comparable> implements DS6_PriorityQueueInterface<E>
 {
-    private ArrayList<E> queue;
+    public ArrayList<E> queue;
     public DS6_PriorityQueue()
     {
         queue= new ArrayList<>();
